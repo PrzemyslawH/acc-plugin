@@ -1,14 +1,194 @@
 <!doctype html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./css/style.min.css">
-    <title>Web4all - WCAG Accessibility Plugin</title>
+  <meta charset='UTF-8'>
+  <meta content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'
+        name='viewport'>
+  <meta content='ie=edge' http-equiv='X-UA-Compatible'>
+  <link href='./css/style.min.css' rel='stylesheet'>
+  <title>Web4all - WCAG Accessibility Plugin</title>
 </head>
 <body>
+<section class='w4a w4a-position w4a-position--right w4a-position--top'>
+  <button class='w4a-btn w4a-open' onclick='toggleSidebar()'>
+    <span class='w4a-btn__icon w4a-btn__icon--open'></span>
+  </button>
+  <div class='w4a-sidebar'>
+    <div class='w4a-sidebar__header'>
+      <span class='w4a-sidebar__heading'>Accessibility tools</span>
+      <button class='w4a-btn w4a-close' onclick='toggleSidebar()'>
+        <span class='w4a-close__line'></span>
+        <span class='w4a-close__line'></span>
+      </button>
+    </div>
+    <div class='w4a-sidebar__body'>
+      <div class='w4a-group'>
+        <h2 class='w4a-group__heading'>Theme mode</h2>
+        <ul class='w4a-group__buttons'>
+          <li>
+            <button class='w4a-btn w4a-btn__icon w4a-btn__icon--light-contrast'>
+              <span class='w4a-btn__label'>Light contrast</span>
+              <span class='w4a-btn__label'>Light contrast</span>
+            </button>
+          </li>
+          <li>
+            <button class='w4a-btn w4a-btn__icon w4a-btn__icon--dark-contrast'>
+              <span class='w4a-btn__label'>Dark contrast</span>
+              <span class='w4a-btn__label'>Dark contrast</span>
+            </button>
+          </li>
+          <li>
+            <button class='w4a-btn w4a-btn__icon w4a-btn__icon--low-saturation'>
+              <span class='w4a-btn__label'>Low saturation</span>
+              <span class='w4a-btn__label'>Low saturation</span>
+            </button>
+          </li>
+          <li>
+            <button class='w4a-btn w4a-btn__icon w4a-btn__icon--high-saturation'>
+              <span class='w4a-btn__label'>High saturation</span>
+              <span class='w4a-btn__label'>High saturation</span>
+            </button>
+          </li>
+          <li>
+            <button class='w4a-btn w4a-btn__icon w4a-btn__icon--monochrome w4a-btn--active'>
+              <span class='w4a-btn__label'>Monochrome</span>
+              <span class='w4a-btn__label'>Monochrome</span>
+            </button>
+          </li>
+          <li>
+            <button class='w4a-btn w4a-btn__icon w4a-btn__icon--invert-colors'>
+              <span class='w4a-btn__label'>Invert colors</span>
+              <span class='w4a-btn__label'>Invert colors</span>
+            </button>
+          </li>
+          <li>
+            <button class='w4a-btn w4a-btn__icon w4a-btn__icon--highlight-headings'>
+              <span class='w4a-btn__label'>Highlight headings</span>
+              <span class='w4a-btn__label'>Highlight headings</span>
+            </button>
+          </li>
+          <li>
+            <button class='w4a-btn w4a-btn__icon w4a-btn__icon--highlight-links'>
+              <span class='w4a-btn__label'>Highlight links</span>
+              <span class='w4a-btn__label'>Highlight links</span>
+            </button>
+          </li>
+          <li>
+            <button class='w4a-btn w4a-btn__icon w4a-btn__icon--screen-reader'>
+              <span class='w4a-btn__label'>Screen reader</span>
+              <span class='w4a-btn__label'>Screen reader</span>
+            </button>
+          </li>
+          <li>
+            <button class='w4a-btn w4a-btn__icon w4a-btn__icon--read-mode'>
+              <span class='w4a-btn__label'>Read mode</span>
+              <span class='w4a-btn__label'>Read mode</span>
+            </button>
+          </li>
+          <li>
+            <button class='w4a-btn w4a-btn__icon w4a-btn__icon--big-cursor'>
+              <span class='w4a-btn__label'>Big cursor</span>
+              <span class='w4a-btn__label'>Big cursor</span>
+            </button>
+          </li>
+          <li>
+            <button class='w4a-btn w4a-btn__icon w4a-btn__icon--hide-images'>
+              <span class='w4a-btn__label'>Hide images</span>
+              <span class='w4a-btn__label'>Hide images</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class='w4a-group'>
+        <h2 class='w4a-group__heading'>Text size</h2>
+        <ul class='w4a-group__buttons'>
+          <li>
+            <button class='w4a-btn w4a-btn--size w4a-btn--active'>
+              <span class='w4a-btn__label'>S</span>
+              <span class='w4a-btn__label'>S</span>
+            </button>
+          </li>
+          <li>
+            <button class='w4a-btn w4a-btn--size'>
+              <span class='w4a-btn__label'>M</span>
+              <span class='w4a-btn__label'>M</span>
+            </button>
+          </li>
+          <li>
+            <button class='w4a-btn w4a-btn--size'>
+              <span class='w4a-btn__label'>L</span>
+              <span class='w4a-btn__label'>L</span>
+            </button>
+          </li>
+          <li>
+            <button class='w4a-btn w4a-btn--size'>
+              <span class='w4a-btn__label'>XL</span>
+              <span class='w4a-btn__label'>XL</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class='w4a-group'>
+        <h2 class='w4a-group__heading'>Letter spacing</h2>
+        <ul class='w4a-group__buttons'>
+          <li>
+            <button class='w4a-btn w4a-btn--size'>
+              <span class='w4a-btn__label'>S</span>
+              <span class='w4a-btn__label'>S</span>
+            </button>
+          </li>
+          <li>
+            <button class='w4a-btn w4a-btn--size w4a-btn--active'>
+              <span class='w4a-btn__label'>M</span>
+              <span class='w4a-btn__label'>M</span>
+            </button>
+          </li>
+          <li>
+            <button class='w4a-btn w4a-btn--size'>
+              <span class='w4a-btn__label'>L</span>
+              <span class='w4a-btn__label'>L</span>
+            </button>
+          </li>
+          <li>
+            <button class='w4a-btn w4a-btn--size'>
+              <span class='w4a-btn__label'>XL</span>
+              <span class='w4a-btn__label'>XL</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class='w4a-group'>
+        <h2 class='w4a-group__heading'>Word spacing</h2>
+        <ul class='w4a-group__buttons'>
+          <li>
+            <button class='w4a-btn w4a-btn--size w4a-btn--active'>
+              <span class='w4a-btn__label'>S</span>
+              <span class='w4a-btn__label'>S</span>
+            </button>
+          </li>
+          <li>
+            <button class='w4a-btn w4a-btn--size'>
+              <span class='w4a-btn__label'>M</span>
+              <span class='w4a-btn__label'>M</span>
+            </button>
+          </li>
+          <li>
+            <button class='w4a-btn w4a-btn--size'>
+              <span class='w4a-btn__label'>L</span>
+              <span class='w4a-btn__label'>L</span>
+            </button>
+          </li>
+          <li>
+            <button class='w4a-btn w4a-btn--size'>
+              <span class='w4a-btn__label'>XL</span>
+              <span class='w4a-btn__label'>XL</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 <script src='./js/scripts.min.js'></script>
 </body>
 </html>
