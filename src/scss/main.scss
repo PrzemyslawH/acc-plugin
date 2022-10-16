@@ -112,11 +112,36 @@ $color-light: #fff;
       }
     }
 
+    &__icon {
+      position: relative;
+      height: 3.75rem;
+      width: 15rem;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: $color-light;
+        top: 50%;
+        left: 1rem;
+        position: absolute;
+        transform: translateY(-50%);
+        mask-position: center;
+        mask-repeat: no-repeat;
+      }
+
+      > span {
+        padding: 0 1rem 0 3.5rem;
+        justify-content: flex-start;
+      }
+    }
+
     &--active {
       background-color: $color-light;
 
       &::before {
-        background-color: $color-dark !important;
+        background-color: $color-dark;
       }
 
       > span {
