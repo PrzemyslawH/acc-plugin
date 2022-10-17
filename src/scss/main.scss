@@ -14,7 +14,7 @@ $color-light: #fff;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 14px;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.0125rem;
     color: $color-light;
   }
 
@@ -26,25 +26,36 @@ $color-light: #fff;
   &-position {
     position: fixed;
 
-    &--right {
+    &--top-right {
+      top: 1.25rem;
       right: 1.25rem;
     }
 
-    &--left {
+    &--middle-right {
+      top: 50%;
+      transform: translateY(-50%);
+      right: 1.25rem;
+    }
+
+    &--bottom-right {
+      bottom: 1.25rem;
+      right: 1.25rem;
+    }
+
+    &--top-left {
+      top: 1.25rem;
       left: 1.25rem;
     }
 
-    &--top {
-      top: 1.25rem;
-    }
-
-    &--middle {
+    &--middle-left {
       top: 50%;
       transform: translateY(-50%);
+      left: 1.25rem;
     }
 
-    &--bottom {
+    &--bottom-left {
       bottom: 1.25rem;
+      left: 1.25rem;
     }
   }
 
@@ -68,6 +79,7 @@ $color-light: #fff;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding-bottom: 1.5rem;
     }
 
     &__heading {
@@ -76,11 +88,13 @@ $color-light: #fff;
   }
 
   &-group {
+    margin-bottom: 2.5rem;
+
     &__heading {
       text-transform: uppercase;
       letter-spacing: 0.125rem;
       font-size: 0.625rem;
-      margin: 2rem 0 1rem 0;
+      margin-bottom: 1rem;
       opacity: 0.8;
     }
 
@@ -88,10 +102,6 @@ $color-light: #fff;
       grid-gap: 0.625rem;
       display: flex;
       flex-wrap: wrap;
-
-      li {
-        height: 3.75rem;
-      }
     }
   }
 
@@ -99,71 +109,64 @@ $color-light: #fff;
     all: unset;
     cursor: pointer;
     box-sizing: border-box;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 3rem;
-    border: 2px solid transparent;
     width: 3rem;
+    color: rgba($color-light, 0.8);
+    border: 2px solid transparent;
+    transition: border 0.2s ease-in-out, color 0.2s ease-in-out;
 
     &:hover {
       border: 2px solid rgba($color-light, 0.05);
-
-      .w4a-btn__label {
-        top: -100%;
-      }
+      color: $color-light;
     }
 
     &__icon {
+      padding: 0 1rem 0 3.5rem;
+      justify-content: flex-start;
       position: relative;
       height: 3.75rem;
       width: 15rem;
+      transition: padding-left 0.2s ease-in-out;
+
+      &:hover {
+        padding-left: 3.625rem;
+      }
 
       &::before {
         content: '';
-        display: inline-block;
         width: 1.5rem;
         height: 1.5rem;
         background-color: $color-light;
         top: 50%;
+        transform: translateY(-50%);
         left: 1rem;
         position: absolute;
-        transform: translateY(-50%);
         mask-position: center;
         mask-repeat: no-repeat;
-      }
-
-      > span {
-        padding: 0 1rem 0 3.5rem;
-        justify-content: flex-start;
       }
     }
 
     &--active {
       background-color: $color-light;
+      color: $color-dark;
 
       &::before {
         background-color: $color-dark;
       }
 
-      > span {
+      &:hover {
         color: $color-dark;
       }
-    }
-
-    &__label {
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      top: 0;
-      transition: top 0.2s ease-in-out;
-      font-weight: 500;
     }
   }
 
   &-open {
     width: 3.5rem;
     height: 3.5rem;
+    padding: unset;
     border-radius: 50%;
     box-sizing: content-box;
     margin: 0.25rem;
@@ -184,7 +187,7 @@ $color-light: #fff;
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 50%;
-    transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, border 0.2s ease-in-out;
     transform: rotate(-45deg);
 
     &:hover {
