@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
 
-$color-primary: #00a3ff;
-$color-dark: #242424;
-$color-light: #fff;
-
 .w4a {
   *,
   *:after,
@@ -15,7 +11,6 @@ $color-light: #fff;
     font-weight: 400;
     font-size: 14px;
     letter-spacing: 0.0125rem;
-    color: $color-light;
   }
 
   ul,
@@ -63,7 +58,6 @@ $color-light: #fff;
     height: 100vh;
     width: 100%;
     max-width: 36rem;
-    background: $color-dark;
     position: fixed;
     top: 0;
     right: 0;
@@ -114,14 +108,8 @@ $color-light: #fff;
     align-items: center;
     height: 3rem;
     width: 3rem;
-    color: rgba($color-light, 0.8);
     border: 2px solid transparent;
     transition: border 0.2s ease-in-out, color 0.2s ease-in-out;
-
-    &:hover {
-      border: 2px solid rgba($color-light, 0.05);
-      color: $color-light;
-    }
 
     &__icon {
       padding: 0 1rem 0 3.5rem;
@@ -129,7 +117,8 @@ $color-light: #fff;
       position: relative;
       height: 3.75rem;
       width: 15rem;
-      transition: padding-left 0.2s ease-in-out;
+      transition: padding-left 0.2s ease-in-out, border 0.2s ease-in-out,
+        color 0.2s ease-in-out;
 
       &:hover {
         padding-left: 3.625rem;
@@ -139,26 +128,12 @@ $color-light: #fff;
         content: '';
         width: 1.5rem;
         height: 1.5rem;
-        background-color: $color-light;
         top: 50%;
         transform: translateY(-50%);
         left: 1rem;
         position: absolute;
         mask-position: center;
         mask-repeat: no-repeat;
-      }
-    }
-
-    &--active {
-      background-color: $color-light;
-      color: $color-dark;
-
-      &::before {
-        background-color: $color-dark;
-      }
-
-      &:hover {
-        color: $color-dark;
       }
     }
   }
@@ -173,7 +148,6 @@ $color-light: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: $color-primary;
     animation: w4a-pulse 2s infinite;
     transition: margin 0.2s ease-in-out, padding 0.2s ease-in-out;
 
@@ -203,19 +177,20 @@ $color-light: #fff;
       top: 0;
 
       &:first-child {
-        background: $color-light;
         height: 0.0625rem;
         width: 1.25rem;
       }
 
       &:last-child {
-        background: $color-light;
         height: 1.25rem;
         width: 0.0625rem;
       }
     }
   }
 }
+
+@import 'themes';
+@import 'icons';
 
 @keyframes w4a-pulse {
   0% {
@@ -231,5 +206,3 @@ $color-light: #fff;
     box-shadow: 0 0 0 0 rgba($color-primary, 0);
   }
 }
-
-@import 'icons';

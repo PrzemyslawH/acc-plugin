@@ -1,0 +1,93 @@
+$color-primary: #00a3ff;
+$color-dark: #242424;
+$color-light: #f6f6f6;
+
+@mixin theme-mode($font-color, $background-color, $button-color) {
+  .w4a {
+    *,
+    *:after,
+    *:before {
+      color: $font-color;
+    }
+
+    &-sidebar {
+      background: $background-color;
+
+      &__heading {
+        color: $font-color;
+      }
+    }
+
+    &-group {
+      &__heading {
+        color: $font-color;
+      }
+    }
+
+    &-btn {
+      color: rgba($font-color, 0.8);
+
+      &:hover {
+        border: 2px solid rgba($font-color, 0.05);
+        color: $font-color;
+      }
+
+      &__icon {
+        &::before {
+          background-color: $font-color;
+        }
+      }
+
+      &--active {
+        background-color: $font-color;
+        color: $background-color;
+
+        &::before {
+          background-color: $background-color;
+        }
+
+        &:hover {
+          color: $background-color;
+        }
+      }
+    }
+
+    &-close {
+      &__line {
+        &:first-child {
+          background: $font-color;
+        }
+
+        &:last-child {
+          background: $font-color;
+        }
+      }
+    }
+
+    &-open {
+      background: $button-color;
+
+      &:before {
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+.w4a {
+  @media (prefers-color-scheme: dark) {
+    @include theme-mode($color-light, $color-dark, $color-primary);
+  }
+
+  @media (prefers-color-scheme: light) {
+    @include theme-mode($color-dark, $color-light, $color-primary);
+  }
+
+  &--dark-mode {
+    @include theme-mode($color-light, $color-dark, $color-primary);
+  }
+
+  &--light-mode {
+    @include theme-mode($color-dark, $color-light, $color-primary);
+  }
+}
