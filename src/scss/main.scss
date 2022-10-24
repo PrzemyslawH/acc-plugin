@@ -79,6 +79,18 @@
     &__heading {
       font-size: 1.25rem;
     }
+
+    &__body {
+      overflow-y: scroll;
+      height: 100%;
+      padding-bottom: 4rem;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
   }
 
   &-group {
@@ -186,6 +198,35 @@
       &:last-child {
         height: 1.25rem;
         width: 0.0625rem;
+      }
+    }
+  }
+
+  &-reset {
+    width: unset;
+    height: unset;
+    font-size: 1.125rem;
+    font-weight: 500;
+    position: relative;
+    border: none;
+    padding-bottom: 0.125rem;
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 0.125rem;
+      background-color: #fff;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: width 0.2s ease-in-out;
+    }
+
+    &:hover {
+      border: none !important;
+
+      &::before {
+        width: 0;
       }
     }
   }

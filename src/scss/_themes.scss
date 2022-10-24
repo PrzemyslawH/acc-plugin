@@ -71,6 +71,19 @@ $color-light: #f6f6f6;
         background-color: #fff;
       }
     }
+
+    &-reset {
+      &::before {
+        background-color: rgba($font-color, 0.8);
+      }
+
+      &:hover {
+        &::before {
+          background-color: $font-color;
+          width: 0;
+        }
+      }
+    }
   }
 }
 
