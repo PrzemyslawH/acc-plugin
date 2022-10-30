@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
 
+$screen-medium: 767px;
+
 .w4a {
   *,
   *:after,
@@ -65,6 +67,10 @@
     transform: translateX(100%);
     transition: transform 0.2s ease-in-out;
 
+    @media screen and (max-width: $screen-medium) {
+      max-width: 26rem;
+    }
+
     &--open {
       transform: translateX(0);
     }
@@ -87,6 +93,10 @@
       scrollbar-width: none;
       -ms-overflow-style: none;
 
+      @media screen and (max-width: $screen-medium) {
+        padding-right: 1rem;
+      }
+
       &::-webkit-scrollbar {
         display: none;
       }
@@ -106,14 +116,20 @@
 
     &__buttons {
       grid-gap: 0.625rem;
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+
+      &--size {
+        display: flex;
+        flex-wrap: wrap;
+      }
     }
   }
 
   &-btn {
     all: unset;
     cursor: pointer;
+    user-select: none;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -129,7 +145,7 @@
       justify-content: flex-start;
       position: relative;
       height: 3.75rem;
-      width: 15rem;
+      width: 100%;
       transition: padding-left 0.2s ease-in-out, border 0.2s ease-in-out,
         color 0.2s ease-in-out;
 
@@ -234,18 +250,3 @@
 
 @import 'themes';
 @import 'icons';
-
-@keyframes w4a-pulse {
-  0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba($color-primary, 0.8);
-  }
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 10px rgba($color-primary, 0);
-  }
-  100% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba($color-primary, 0);
-  }
-}
