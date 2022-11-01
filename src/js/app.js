@@ -36,6 +36,8 @@ function invertColors(el) {
   toggleActive(el);
 }
 
+// Readability options
+
 function highlightHeadings(el) {
   toggleActive(el);
 }
