@@ -20,6 +20,9 @@ $screen-medium: 767px;
     list-style: none;
   }
 
+  z-index: 999999999;
+  position: fixed;
+
   &-position {
     position: fixed;
 
