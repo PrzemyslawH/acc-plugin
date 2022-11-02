@@ -26,22 +26,22 @@
         <h2 class='w4a-group__heading'>Theme mode</h2>
         <ul class='w4a-group__buttons'>
           <li>
-            <button class='w4a-btn w4a-btn__icon w4a-btn__icon--light-contrast' aria-label='Light contrast' onclick='lightContrast(this)'>Light contrast</button>
+            <button id='w4a-light-contrast' class='w4a-btn w4a-btn__icon w4a-btn__icon--light-contrast' aria-label='Light contrast'>Light contrast</button>
           </li>
           <li>
-            <button class='w4a-btn w4a-btn__icon w4a-btn__icon--dark-contrast' aria-label='Dark contrast' onclick='darkContrast(this)'>Dark contrast</button>
+            <button id='w4a-dark-contrast' class='w4a-btn w4a-btn__icon w4a-btn__icon--dark-contrast' aria-label='Dark contrast'>Dark contrast</button>
           </li>
           <li>
-            <button class='w4a-btn w4a-btn__icon w4a-btn__icon--low-saturation' aria-label='Low saturation' onclick='lowSaturation(this)'>Low saturation</button>
+            <button id='w4a-low-saturation' class='w4a-btn w4a-btn__icon w4a-btn__icon--low-saturation' aria-label='Low saturation'>Low saturation</button>
           </li>
           <li>
-            <button class='w4a-btn w4a-btn__icon w4a-btn__icon--high-saturation' aria-label='High saturation' onclick='highSaturation(this)'>High saturation</button>
+            <button id='w4a-high-saturation' class='w4a-btn w4a-btn__icon w4a-btn__icon--high-saturation' aria-label='High saturation'>High saturation</button>
           </li>
           <li>
-            <button class='w4a-btn w4a-btn__icon w4a-btn__icon--monochrome' aria-label='Monochrome' onclick='monochrome(this)'>Monochrome</button>
+            <button id='w4a-monochrome' class='w4a-btn w4a-btn__icon w4a-btn__icon--monochrome' aria-label='Monochrome'>Monochrome</button>
           </li>
           <li>
-            <button class='w4a-btn w4a-btn__icon w4a-btn__icon--invert-colors' aria-label='Invert colors' onclick='invertColors(this)'>Invert colors</button>
+            <button id='w4a-invert-colors' class='w4a-btn w4a-btn__icon w4a-btn__icon--invert-colors' aria-label='Invert colors'>Invert colors</button>
           </li>
         </ul>
       </div>
@@ -49,22 +49,22 @@
         <h2 class='w4a-group__heading'>Readability options</h2>
         <ul class='w4a-group__buttons'>
           <li>
-            <button class='w4a-btn w4a-btn__icon w4a-btn__icon--highlight-headings' aria-label='Highlight headings' onclick='highlightHeadings(this)'>Highlight headings</button>
+            <button id='w4a-highlight-headings' class='w4a-btn w4a-btn__icon w4a-btn__icon--highlight-headings' aria-label='Highlight headings'>Highlight headings</button>
           </li>
           <li>
-            <button class='w4a-btn w4a-btn__icon w4a-btn__icon--highlight-links' aria-label='Highlight links' onclick='highlightLinks(this)'>Highlight links</button>
+            <button id='w4a-highlight-links' class='w4a-btn w4a-btn__icon w4a-btn__icon--highlight-links' aria-label='Highlight links'>Highlight links</button>
           </li>
           <li>
-            <button class='w4a-btn w4a-btn__icon w4a-btn__icon--screen-reader' aria-label='Screen reader' onclick='screenReader(this)'>Screen reader</button>
+            <button id='w4a-screen-reader' class='w4a-btn w4a-btn__icon w4a-btn__icon--screen-reader' aria-label='Screen reader'>Screen reader</button>
           </li>
           <li>
-            <button class='w4a-btn w4a-btn__icon w4a-btn__icon--read-mode' aria-label='Read mode' onclick='readMode(this)'>Read mode</button>
+            <button id='w4a-read-mode' class='w4a-btn w4a-btn__icon w4a-btn__icon--read-mode' aria-label='Read mode'>Read mode</button>
           </li>
           <li>
-            <button class='w4a-btn w4a-btn__icon w4a-btn__icon--big-cursor' aria-label='Big cursor' onclick='bigCursor(this)'>Big cursor</button>
+            <button id='w4a-big-cursor' class='w4a-btn w4a-btn__icon w4a-btn__icon--big-cursor' aria-label='Big cursor'>Big cursor</button>
           </li>
           <li>
-            <button class='w4a-btn w4a-btn__icon w4a-btn__icon--hide-images' aria-label='Hide images' onclick='hideImages(this)'>Hide images</button>
+            <button id='w4a-hide-images' class='w4a-btn w4a-btn__icon w4a-btn__icon--hide-images' aria-label='Hide images'>Hide images</button>
           </li>
         </ul>
       </div>
@@ -72,16 +72,16 @@
         <h2 class='w4a-group__heading'>Letter spacing</h2>
         <ul class='w4a-group__buttons w4a-group__buttons--size'>
           <li>
-            <button class='w4a-btn w4a-btn--active' aria-label='Letter spacing small' onclick='letterSpacingSmall(this)'>S</button>
+            <button id='w4a-letter-spacing-s' class='w4a-btn' aria-label='Letter spacing small'>S</button>
           </li>
           <li>
-            <button class='w4a-btn' aria-label='Letter spacing medium' onclick='letterSpacingMedium(this)'>M</button>
+            <button id='w4a-letter-spacing-m' class='w4a-btn' aria-label='Letter spacing medium'>M</button>
           </li>
           <li>
-            <button class='w4a-btn' aria-label='Letter spacing large' onclick='letterSpacingLarge(this)'>L</button>
+            <button id='w4a-letter-spacing-l' class='w4a-btn' aria-label='Letter spacing large'>L</button>
           </li>
           <li>
-            <button class='w4a-btn' aria-label='Letter spacing extra large' onclick='letterSpacingXLarge(this)'>XL</button>
+            <button id='w4a-letter-spacing-xl' class='w4a-btn' aria-label='Letter spacing extra large'>XL</button>
           </li>
         </ul>
       </div>
@@ -89,16 +89,16 @@
         <h2 class='w4a-group__heading'>Text size</h2>
         <ul class='w4a-group__buttons w4a-group__buttons--size'>
           <li>
-            <button class='w4a-btn' aria-label='Text size small' onclick='textSizeSmall(this)'>S</button>
+            <button id='w4a-text-size-s' class='w4a-btn' aria-label='Text size small'>S</button>
           </li>
           <li>
-            <button class='w4a-btn w4a-btn--active' aria-label='Text size medium' onclick='textSizeMedium(this)'>M</button>
+            <button id='w4a-text-size-m' class='w4a-btn' aria-label='Text size medium'>M</button>
           </li>
           <li>
-            <button class='w4a-btn' aria-label='Text size large' onclick='textSizeLarge(this)'>L</button>
+            <button id='w4a-text-size-l' class='w4a-btn' aria-label='Text size large'>L</button>
           </li>
           <li>
-            <button class='w4a-btn' aria-label='Text size extra large' onclick='textSizeXLarge(this)'>XL</button>
+            <button id='w4a-text-size-xl' class='w4a-btn' aria-label='Text size extra large'>XL</button>
           </li>
         </ul>
       </div>
@@ -106,21 +106,21 @@
         <h2 class='w4a-group__heading'>Word spacing</h2>
         <ul class='w4a-group__buttons w4a-group__buttons--size'>
           <li>
-            <button class='w4a-btn w4a-btn--active' aria-label='Word spacing small' onclick='wordSpacingSmall(this)'>S</button>
+            <button id='w4a-word-spacing-s' class='w4a-btn' aria-label='Word spacing small'>S</button>
           </li>
           <li>
-            <button class='w4a-btn' aria-label='Word spacing medium' onclick='wordSpacingMedium(this)'>M</button>
+            <button id='w4a-word-spacing-m' class='w4a-btn' aria-label='Word spacing medium'>M</button>
           </li>
           <li>
-            <button class='w4a-btn' aria-label='Word spacing large' onclick='wordSpacingLarge(this)'>L</button>
+            <button id='w4a-word-spacing-l' class='w4a-btn' aria-label='Word spacing large'>L</button>
           </li>
           <li>
-            <button class='w4a-btn' aria-label='Word spacing extra large' onclick='wordSpacingXLarge(this)'>XL</button>
+            <button id='w4a-word-spacing-xl' class='w4a-btn' aria-label='Word spacing extra large'>XL</button>
           </li>
         </ul>
       </div>
       <div class='w4a-group'>
-        <button class='w4a-btn w4a-reset'>Reset</button>
+        <button id='w4a-reset' class='w4a-btn w4a-reset'>Reset</button>
       </div>
     </div>
   </div>

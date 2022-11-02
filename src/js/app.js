@@ -3,115 +3,160 @@ function toggleSidebar() {
   sidebar.classList.toggle('w4a-sidebar--open');
 }
 
-function toggleActive(el) {
-  const button = el.closest('.w4a-group__buttons').querySelectorAll('.w4a-btn');
+const activateOneOption = (el) => {
+  const buttons = el
+    .closest('.w4a-group__buttons')
+    .querySelectorAll('.w4a-btn');
 
-  button.forEach((item) => item.classList.remove('w4a-btn--active'));
-  el.classList.add('w4a-btn--active');
-}
+  el.classList.contains('w4a-btn--active')
+    ? el.classList.remove('w4a-btn--active')
+    : (buttons.forEach((item) => item.classList.remove('w4a-btn--active')),
+      el.classList.add('w4a-btn--active'));
+};
+
+const activateManyOptions = (el) => {
+  el.classList.toggle('w4a-btn--active');
+};
+
+// Reset
+
+const resetOptions = () => {
+  const allButtons = document.querySelectorAll('.w4a-sidebar .w4a-btn');
+
+  allButtons.forEach((item) => item.classList.remove('w4a-btn--active'));
+};
+
+const btnReset = document.querySelector('#w4a-reset');
+btnReset.addEventListener('click', function () {
+  resetOptions();
+});
 
 // Theme mode
 
-function lightContrast(el) {
-  toggleActive(el);
-}
+const btnLightContrast = document.querySelector('#w4a-light-contrast');
+btnLightContrast.addEventListener('click', function () {
+  activateOneOption(this);
+});
 
-function darkContrast(el) {
-  toggleActive(el);
-}
+const btnDarkContrast = document.querySelector('#w4a-dark-contrast');
+btnDarkContrast.addEventListener('click', function () {
+  activateOneOption(this);
+});
 
-function lowSaturation(el) {
-  toggleActive(el);
-}
+const btnLowSaturation = document.querySelector('#w4a-low-saturation');
+btnLowSaturation.addEventListener('click', function () {
+  activateOneOption(this);
+});
 
-function highSaturation(el) {
-  toggleActive(el);
-}
+const btnHighSaturation = document.querySelector('#w4a-high-saturation');
+btnHighSaturation.addEventListener('click', function () {
+  activateOneOption(this);
+});
 
-function monochrome(el) {
-  toggleActive(el);
-}
+const btnMonochrome = document.querySelector('#w4a-monochrome');
+btnMonochrome.addEventListener('click', function () {
+  activateOneOption(this);
+});
 
-function invertColors(el) {
-  toggleActive(el);
-}
+const btnInvertColors = document.querySelector('#w4a-invert-colors');
+btnInvertColors.addEventListener('click', function () {
+  activateOneOption(this);
+});
 
 // Readability options
 
-function highlightHeadings(el) {
-  toggleActive(el);
-}
+const btnHighlightHeadings = document.querySelector('#w4a-highlight-headings');
+btnHighlightHeadings.addEventListener('click', function () {
+  activateManyOptions(this);
+});
 
-function highlightLinks(el) {
-  toggleActive(el);
-}
+const btnHighlightLinks = document.querySelector('#w4a-highlight-links');
+btnHighlightLinks.addEventListener('click', function () {
+  activateManyOptions(this);
+});
 
-function screenReader(el) {
-  toggleActive(el);
-}
+const btnScreenReader = document.querySelector('#w4a-screen-reader');
+btnScreenReader.addEventListener('click', function () {
+  activateManyOptions(this);
+});
 
-function readMode(el) {
-  toggleActive(el);
-}
+const btnReadMode = document.querySelector('#w4a-read-mode');
+btnReadMode.addEventListener('click', function () {
+  activateManyOptions(this);
+});
 
-function bigCursor(el) {
-  toggleActive(el);
-}
+const btnBigCursor = document.querySelector('#w4a-big-cursor');
+btnBigCursor.addEventListener('click', function () {
+  activateManyOptions(this);
+});
 
-function hideImages(el) {
-  toggleActive(el);
-}
+const btnHideImages = document.querySelector('#w4a-hide-images');
+btnHideImages.addEventListener('click', function () {
+  activateManyOptions(this);
+});
 
 // Letter spacing
 
-function letterSpacingSmall(el) {
-  toggleActive(el);
-}
+const btnLetterSpacingS = document.querySelector('#w4a-letter-spacing-s');
+btnLetterSpacingS.addEventListener('click', function () {
+  activateOneOption(this);
+});
 
-function letterSpacingMedium(el) {
-  toggleActive(el);
-}
+const btnLetterSpacingM = document.querySelector('#w4a-letter-spacing-m');
+btnLetterSpacingM.addEventListener('click', function () {
+  activateOneOption(this);
+});
 
-function letterSpacingLarge(el) {
-  toggleActive(el);
-}
+const btnLetterSpacingL = document.querySelector('#w4a-letter-spacing-l');
+btnLetterSpacingL.addEventListener('click', function () {
+  activateOneOption(this);
+});
 
-function letterSpacingXLarge(el) {
-  toggleActive(el);
-}
+const btnLetterSpacingXL = document.querySelector('#w4a-letter-spacing-xl');
+btnLetterSpacingXL.addEventListener('click', function () {
+  activateOneOption(this);
+});
 
 // Text size
 
-function textSizeSmall(el) {
-  toggleActive(el);
-}
+const btnTextSizeS = document.querySelector('#w4a-text-size-s');
+btnTextSizeS.addEventListener('click', function () {
+  activateOneOption(this);
+});
 
-function textSizeMedium(el) {
-  toggleActive(el);
-}
+const btnTextSizeM = document.querySelector('#w4a-text-size-m');
+btnTextSizeM.addEventListener('click', function () {
+  activateOneOption(this);
+});
 
-function textSizeLarge(el) {
-  toggleActive(el);
-}
+const btnTextSizeL = document.querySelector('#w4a-text-size-l');
+btnTextSizeL.addEventListener('click', function () {
+  activateOneOption(this);
+});
 
-function textSizeXLarge(el) {
-  toggleActive(el);
-}
+const btnTextSizeXL = document.querySelector('#w4a-text-size-xl');
+btnTextSizeXL.addEventListener('click', function () {
+  activateOneOption(this);
+});
 
 // Word spacing
 
-function wordSpacingSmall(el) {
-  toggleActive(el);
-}
+const btnWordSpacingS = document.querySelector('#w4a-word-spacing-s');
+btnWordSpacingS.addEventListener('click', function () {
+  activateOneOption(this);
+});
 
-function wordSpacingMedium(el) {
-  toggleActive(el);
-}
+const btnWordSpacingM = document.querySelector('#w4a-word-spacing-m');
+btnWordSpacingM.addEventListener('click', function () {
+  activateOneOption(this);
+});
 
-function wordSpacingLarge(el) {
-  toggleActive(el);
-}
+const btnWordSpacingL = document.querySelector('#w4a-word-spacing-l');
+btnWordSpacingL.addEventListener('click', function () {
+  activateOneOption(this);
+});
 
-function wordSpacingXLarge(el) {
-  toggleActive(el);
-}
+const btnWordSpacingXL = document.querySelector('#w4a-word-spacing-xl');
+btnWordSpacingXL.addEventListener('click', function () {
+  activateOneOption(this);
+});
